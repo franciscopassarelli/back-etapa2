@@ -6,7 +6,7 @@ export const getOrders = async (req, res) => {
     const orders = await Order.find();
 
     const ordersAdapted = orders.map((order) => ({
-  id: order._id,
+  id: order.id,
   buyer: order.buyer,
   items: order.items,
   total: order.total,
